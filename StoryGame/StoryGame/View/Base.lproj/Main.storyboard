@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-Fv-Yg1">
+                                <rect key="frame" x="20" y="44" width="374" height="658"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L8z-AE-1yt">
+                                <rect key="frame" x="0.0" y="712" width="414" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="f4A-l3-mgG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="ChoiceOne"/>
+                                        <connections>
+                                            <action selector="chosePath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ki2-sx-d5K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UAp-Z8-DLY">
+                                        <rect key="frame" x="0.0" y="77.5" width="414" height="72.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="ChoiceTwo"/>
+                                        <connections>
+                                            <action selector="chosePath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfa-i8-lzf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Jhe-33-r2Y"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L8z-AE-1yt" secondAttribute="bottom" id="62T-ys-0ms"/>
+                            <constraint firstItem="L8z-AE-1yt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9QC-le-scW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L8z-AE-1yt" secondAttribute="trailing" id="ARf-lQ-kNE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Knj-Fv-Yg1" secondAttribute="trailing" constant="20" id="MT6-Fc-Drg"/>
+                            <constraint firstItem="Knj-Fv-Yg1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R2k-pE-jA6"/>
+                            <constraint firstItem="Knj-Fv-Yg1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZV1-Bp-E8h"/>
+                            <constraint firstItem="L8z-AE-1yt" firstAttribute="top" secondItem="Knj-Fv-Yg1" secondAttribute="bottom" constant="10" id="ib7-Ag-J0O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceOne" destination="f4A-l3-mgG" id="Un1-ZJ-3Qp"/>
+                        <outlet property="choiceTwo" destination="UAp-Z8-DLY" id="PhP-tO-kgt"/>
+                        <outlet property="storyLabel" destination="Knj-Fv-Yg1" id="qyO-Sj-p3D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
